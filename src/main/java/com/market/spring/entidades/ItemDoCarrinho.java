@@ -3,21 +3,18 @@ package com.market.spring.entidades;
 import jakarta.persistence.*;
 
 public class ItemDoCarrinho {
-
     @Id
-    @SequenceGenerator(name = "SEQ_ITEMDOCARRINHO",sequenceName = "SEQ_ITEMDOCARRINHO",allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "SEQ_ITEMDOCARRINHO")
-    @Column(name = "NOME_ITEMDOCARRINHO",nullable = false)
-
+    @SequenceGenerator(name = "SEQ_ITEMDOCARRINHO", sequenceName = "SEQ_ITEMDOCARRINHO", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_ITEMDOCARRINHO")
     Long id;
 
-    @Column(name = "COLUNA_VALORDOITEM",nullable = false)
+    @Column(name = "COLUNA_VALORDOITEM", nullable = false)
     double valorTotalDoItem;
 
-    @Column(name = "COLUNA_QUANTIDADE",nullable = false)
+    @Column(name = "COLUNA_QUANTIDADE", nullable = false)
     int quantidade;
 
-    public ItemDoCarrinho(){
+    public ItemDoCarrinho() {
 
     }
 
