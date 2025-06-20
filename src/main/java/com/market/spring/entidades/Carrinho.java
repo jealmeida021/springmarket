@@ -6,6 +6,7 @@ import org.hibernate.annotations.CreationTimestamp;
 
 import java.time.LocalDateTime;
 
+@Entity
 public class Carrinho {
     @Id
     @SequenceGenerator(name = "SEQ_CARRINHO", sequenceName = "SEQ_CARRINHO", allocationSize = 1)
