@@ -3,24 +3,22 @@ package com.market.spring.entidades;
 import jakarta.persistence.*;
 
 public class Produto {
-
     @Id
-            @SequenceGenerator(name = "SEQ_PRODUTO",sequenceName = "SEQ_PRODUTO",allocationSize = 1)
-            @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "SEQ_PRODUTO")
-            @Column(name = "NOME_PRODUTO",nullable = false)
-
+    @SequenceGenerator(name = "SEQ_PRODUTO", sequenceName = "SEQ_PRODUTO", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_PRODUTO")
     Long id;
-    @Column(name = "COLUNA_NOME",nullable = false)
+
+    @Column(name = "COLUNA_NOME", nullable = false)
     String nome;
 
-    @Column(name = "COLUNA_PESO",nullable = false)
+    @Column(name = "COLUNA_PESO", nullable = false)
     int peso;
 
-    @Column(name = "COLUNA_VALOR",nullable = false)
+    @Column(name = "COLUNA_VALOR", nullable = false)
     double valor;
 
     //Construtor principal
-    public Produto(){
+    public Produto() {
 
     }
 
