@@ -19,6 +19,8 @@ public class Venda {
 
 
     Long id;
+
+    @Column(name = "COLUNA_VALORTOTALDAVENDA",nullable = false)
     double valorTotalDaVenda;
 
     public Venda(LocalDateTime localDateTime) {

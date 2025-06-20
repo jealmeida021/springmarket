@@ -10,7 +10,11 @@ public class ItemDoCarrinho {
     @Column(name = "NOME_ITEMDOCARRINHO",nullable = false)
 
     Long id;
+
+    @Column(name = "COLUNA_VALORDOITEM",nullable = false)
     double valorTotalDoItem;
+
+    @Column(name = "COLUNA_QUANTIDADE",nullable = false)
     int quantidade;
 
     public ItemDoCarrinho(){
