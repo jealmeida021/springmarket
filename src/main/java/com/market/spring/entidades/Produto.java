@@ -18,6 +18,10 @@ public class Produto {
     @Column(name = "COLUNA_VALOR", nullable = false)
     double valor;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "COLUNA_CAT_ID", nullable = false)
+    Categoria categoria;
+
     //Construtor principal
     public Produto() {
 
