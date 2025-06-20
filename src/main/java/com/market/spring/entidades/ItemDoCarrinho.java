@@ -2,6 +2,7 @@ package com.market.spring.entidades;
 
 import jakarta.persistence.*;
 
+@Entity
 public class ItemDoCarrinho {
     @Id
     @SequenceGenerator(name = "SEQ_ITEMDOCARRINHO", sequenceName = "SEQ_ITEMDOCARRINHO", allocationSize = 1)
