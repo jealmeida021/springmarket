@@ -8,9 +8,15 @@ public class Produto {
             @SequenceGenerator(name = "SEQ_PRODUTO",sequenceName = "SEQ_PRODUTO",allocationSize = 1)
             @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "SEQ_PRODUTO")
             @Column(name = "NOME_PRODUTO",nullable = false)
+
     Long id;
+    @Column(name = "COLUNA_NOME",nullable = false)
     String nome;
+
+    @Column(name = "COLUNA_PESO",nullable = false)
     int peso;
+
+    @Column(name = "COLUNA_VALOR",nullable = false)
     double valor;
 
     //Construtor principal

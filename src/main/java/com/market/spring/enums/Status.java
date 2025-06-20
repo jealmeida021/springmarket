@@ -1,7 +1,7 @@
 package com.market.spring.enums;
 
-public class Status {
+public enum Status {
 
-    ABERTO
-    FECHADO
+    ABERTO,
+    FECHADO,
 }
