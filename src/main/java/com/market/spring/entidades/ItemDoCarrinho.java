@@ -9,14 +9,42 @@ public class ItemDoCarrinho {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_ITEMDOCARRINHO")
     Long id;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "COLUNA_PRODUTO", nullable = false)
+    Produto produto;
+
     @Column(name = "COLUNA_VALORDOITEM", nullable = false)
     double valorTotalDoItem;
 
     @Column(name = "COLUNA_QUANTIDADE", nullable = false)
     int quantidade;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "COLUNA_CARRINHO", nullable = false)
+    Carrinho carrinho;
+
+
     public ItemDoCarrinho() {
 
+    }
+
+
+
+
+    public Produto getProduto() {
+        return produto;
+    }
+
+    public void setProduto(Produto produto) {
+        this.produto = produto;
+    }
+
+    public Carrinho getCarrinho() {
+        return carrinho;
+    }
+
+    public void setCarrinho(Carrinho carrinho) {
+        this.carrinho = carrinho;
     }
 
     public Long getId() {

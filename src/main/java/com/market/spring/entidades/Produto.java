@@ -27,6 +27,15 @@ public class Produto {
 
     }
 
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(Categoria categoria) {
+        this.categoria = categoria;
+    }
+
     public Long getId() {
         return id;
     }
