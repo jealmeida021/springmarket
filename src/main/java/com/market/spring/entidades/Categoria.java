@@ -2,6 +2,9 @@ package com.market.spring.entidades;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 public class Categoria {
     @Id // Marca o atributo como chave primaria para persistir no banco de dados
@@ -12,9 +15,14 @@ public class Categoria {
     @Column(name = "NOME_CATEGORIA",nullable = false)
     String categoriaDoProduto;
 
+    //Novo atributo
+    private List<Produto>produtos = new ArrayList<>();
+
     public  Categoria(){
 
     }
+
+
 
     public Long getId() {
         return id;
