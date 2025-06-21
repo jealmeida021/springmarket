@@ -1,5 +1,6 @@
 package com.market.spring.entidades;
 
+import com.market.spring.enums.TipoDePagamento;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 
@@ -22,7 +23,15 @@ public class Venda {
     @Column(name = "COLUNA_VALORTOTALDAVENDA", nullable = false)
     double valorTotalDaVenda;
 
+    @Column(name = "COLUNA_TIPOPAGAMENTO")
+    TipoDePagamento tipoDePagamento;
+
+
     public Venda(LocalDateTime localDateTime) {
         this.localDateTime = localDateTime;
+    }
+
+    public Venda(){
+
     }
 }
