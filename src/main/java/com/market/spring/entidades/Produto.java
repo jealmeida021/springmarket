@@ -2,6 +2,8 @@ package com.market.spring.entidades;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+
 @Entity
 public class Produto {
     @Id
@@ -16,7 +18,7 @@ public class Produto {
     int peso;
 
     @Column(name = "COLUNA_VALOR", nullable = false)
-    double valor;
+    BigDecimal valor;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "COLUNA_CAT_ID", nullable = false)
@@ -60,11 +62,11 @@ public class Produto {
         this.peso = peso;
     }
 
-    public double getValor() {
+    public BigDecimal getValor() {
         return valor;
     }
 
-    public void setValor(double valor) {
+    public void setValor(BigDecimal valor) {
         this.valor = valor;
     }
 }

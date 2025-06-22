@@ -4,6 +4,7 @@ import com.market.spring.enums.TipoDePagamento;
 import jakarta.persistence.*;
 import org.hibernate.annotations.CreationTimestamp;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
 @Entity
@@ -19,7 +20,7 @@ public class Venda {
 
 
     @Column(name = "COLUNA_VALORTOTALDAVENDA", nullable = false)
-    double valorTotalDaVenda;
+    BigDecimal valorTotalDaVenda;
 
     @Column(name = "COLUNA_TIPOPAGAMENTO")
     TipoDePagamento tipoDePagamento;
@@ -54,11 +55,11 @@ public class Venda {
         this.localDateTime = localDateTime;
     }
 
-    public double getValorTotalDaVenda() {
+    public BigDecimal getValorTotalDaVenda() {
         return valorTotalDaVenda;
     }
 
-    public void setValorTotalDaVenda(double valorTotalDaVenda) {
+    public void setValorTotalDaVenda(BigDecimal valorTotalDaVenda) {
         this.valorTotalDaVenda = valorTotalDaVenda;
     }
 
