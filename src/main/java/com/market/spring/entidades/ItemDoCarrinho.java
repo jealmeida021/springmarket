@@ -2,6 +2,8 @@ package com.market.spring.entidades;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
+
 @Entity
 public class ItemDoCarrinho {
     @Id
@@ -14,7 +16,7 @@ public class ItemDoCarrinho {
     Produto produto;
 
     @Column(name = "COLUNA_VALORDOITEM", nullable = false)
-    double valorTotalDoItem;
+    BigDecimal valorTotalDoItem;
 
     @Column(name = "COLUNA_QUANTIDADE", nullable = false)
     int quantidade;
@@ -55,11 +57,11 @@ public class ItemDoCarrinho {
         this.id = id;
     }
 
-    public double getValorTotalDoItem() {
+    public BigDecimal getValorTotalDoItem() {
         return valorTotalDoItem;
     }
 
-    public void setValorTotalDoItem(double valorTotalDoItem) {
+    public void setValorTotalDoItem(BigDecimal valorTotalDoItem) {
         this.valorTotalDoItem = valorTotalDoItem;
     }
 
