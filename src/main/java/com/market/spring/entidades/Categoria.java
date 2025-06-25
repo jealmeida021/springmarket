@@ -16,6 +16,7 @@ public class Categoria {
     String categoriaDoProduto;
 
     //Novo atributo
+    @OneToMany(mappedBy =)
     private List<Produto>produtos = new ArrayList<>();
 
     public  Categoria(){
