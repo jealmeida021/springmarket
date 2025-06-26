@@ -1,5 +1,6 @@
 package com.market.spring.entidades;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
@@ -21,7 +22,8 @@ public class Produto {
     BigDecimal valor;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "COLUNA_CAT_ID", nullable = false)
+    @JoinColumn(name = "categoria_id", nullable = false)
+    @JsonBackReference
     Categoria categoria;
 
     //Construtor principal

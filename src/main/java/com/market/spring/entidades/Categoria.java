@@ -1,11 +1,14 @@
 package com.market.spring.entidades;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+
+@Table(name = "category")
 public class Categoria {
     @Id // Marca o atributo como chave primaria para persistir no banco de dados
     @SequenceGenerator(name = "SEQ_CATEGORIA", sequenceName = "SEQ_CATEGORIA", allocationSize = 1)
@@ -16,8 +19,10 @@ public class Categoria {
     String categoriaDoProduto;
 
     //Novo atributo
-    @OneToMany(mappedBy =)
+    @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @JsonManagedReference
     private List<Produto>produtos = new ArrayList<>();
+
 
     public  Categoria(){
 
