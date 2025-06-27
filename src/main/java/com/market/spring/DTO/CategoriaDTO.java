@@ -10,7 +10,7 @@ package com.market.spring.DTO;
 import javax.validation.constraints.NotBlank;
 
 
-public record CategoriaRequestDTO(@NotBlank String categoriaDoProduto ) {
+public record CategoriaDTO(@NotBlank String categoriaDoProduto ) {
 
 
 }
